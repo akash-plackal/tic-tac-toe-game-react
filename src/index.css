@@ -98,3 +98,16 @@ code {
   margin-left: 20px;
   min-width: 190px;
 }
+
+@media (orientation: portrait) {
+  .game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .game-info {
+    margin-left: 20px;
+    margin-top: 50%;
+  }
+}
