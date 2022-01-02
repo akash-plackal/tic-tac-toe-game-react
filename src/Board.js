@@ -1,8 +1,12 @@
 import React from "react";
 import "./index.css";
+import { useCustomStorageHook } from "./useCustomStorageHook";
 
 const Board = () => {
-  const [squares, setSquares] = React.useState(Array(9).fill(null));
+  const [squares, setSquares] = useCustomStorageHook(
+    "tic-tak",
+    Array(9).fill(null)
+  );
 
   const nextValue = calculateNextValue(squares);
   const winner = calculateWinner(squares);
